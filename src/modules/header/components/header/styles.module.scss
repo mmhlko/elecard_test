@@ -1,0 +1,16 @@
+.wrapper {
+    background-color: var(--background-color-blue);
+
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

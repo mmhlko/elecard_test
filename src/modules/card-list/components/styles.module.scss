@@ -1,0 +1,19 @@
+.list_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    row-gap: 20px;
+    column-gap: 32px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;    
+}
+
+.button_reset {
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--background-color-light-blue)
+}

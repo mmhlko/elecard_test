@@ -1,0 +1,41 @@
+.wrapper {
+    padding: 12px 16px;
+    margin: 20px auto;
+    box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+    border-radius: 12px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    .radio_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        li {
+
+            input {
+                display: none;
+            }
+
+            label {
+                display: inline-block;
+                background-color: var(--color-light-grey);
+                transition: all 0.1s ease;
+            }
+
+            input:checked+label {
+                color: var(--color-white);
+                background-color: var(--background-color-light-blue)
+            }
+        }
+    }    
+}
+
+@media (max-width: 767px) {
+    .radio {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,87 @@
+@import "~normalize.css";
+@import url("variables.scss");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&family=Raleway:wght@400;500&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 375px;
+}
+
+body {
+  background-color: var(--color-white);
+  height: 100%;
+  min-width: 375px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  margin-top: 60px;
+  flex: 1;
+}
+
+header,
+footer {
+  z-index: 10;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+span,
+a {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px
+}
+
+.button {
+  border-radius: 6px;
+  padding: 12px 16px;
+  min-width: max-content;
+}
