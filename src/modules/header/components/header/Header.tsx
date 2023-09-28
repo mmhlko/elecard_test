@@ -1,12 +1,16 @@
 import { Logo } from "components/logo/Logo";
 import s from "./styles.module.scss";
 import classnames from "classnames";
-import { memo } from "react";
+import { LegacyRef, memo } from "react";
 
-export const Header = memo(() => {  
-    
+type THeaderProps = {
+    headerRef: LegacyRef<HTMLElement>
+}
+
+export const Header = memo(({headerRef}: THeaderProps) => {  
+
     return (
-        <header className={s.wrapper}>
+        <header ref={headerRef} className={s.wrapper}>
             <div className={classnames("container", s.header)}>
                 <Logo />
             </div>

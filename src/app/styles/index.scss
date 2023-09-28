@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  margin-top: 60px;
+  margin-top: var(--margin-top);
   flex: 1;
 }
 
