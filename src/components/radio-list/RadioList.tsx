@@ -4,25 +4,30 @@ import {Tab} from "modules/card-list/types/cardListTypes";
 
 type TRadioListProps = {
     tabs: { id: string, title: string }[],
+    name: string,
     action: (arg: string) => void,
     children?: ReactNode,
     title: string,
-    defaultChecked?: boolean,
     extraClass?: string
+    currentCheckedItem?: string,
+    defaultChecked?: boolean
 }
 
-export const RadioList = memo(({tabs, action, title, children, defaultChecked, extraClass}: TRadioListProps) => {
+export const RadioList = memo(({name, tabs, action, title, children, extraClass, currentCheckedItem}: TRadioListProps) => {
 
     const returnSortListItem = (item: Tab, index: number) => {
-
-        const handleInputChange = () => {
+        const handleInputChange = () => {           
             action(item.id)
-        }
+        }        
 
         return (
             <li key={index}>
-                <input onChange={handleInputChange} type="radio" id={item.id + index} name="sorting" value={item.id}
-                       defaultChecked={index === 0 && defaultChecked && true}/>
+                <input 
+                    onChange={handleInputChange} 
+                    type="radio" id={item.id + index} 
+                    name={name} value={item.id}
+                    checked={item.id === currentCheckedItem}
+                    />
                 <label htmlFor={item.id + index} className="button">{item.title}</label>
             </li>
         )

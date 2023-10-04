@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 export const Footer = () => {
     return (
-        <footer className={classNames(s.footer, "container")}>
+        <footer className={classNames(s.footer)}>
             <span>© Elecard 2023</span>
         </footer>
     )

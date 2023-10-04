@@ -2,15 +2,17 @@ import { cardListReducer } from "modules/card-list/store/cardListReducer";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"
+import { dataListReducer } from "./data/store/dataListReducer";
+import { storageDataReducer } from "./storageData/store/storageDataReducer";
 
 const persistConfig = {
-    key: "cardList",
-    storage: storage,
-    blacklist: ["loading", "errorState"]
+    key: "storageData",
+    storage: storage
 }
-
-const persistedCardListReducer = persistReducer(persistConfig, cardListReducer);
+const persistedStorageDataReducer = persistReducer(persistConfig, storageDataReducer);
 
 export const rootReducer = combineReducers({
-    cardList: persistedCardListReducer,
+    cardList: cardListReducer,
+    dataList: dataListReducer,
+    storageData: persistedStorageDataReducer
 })

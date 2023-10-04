@@ -10,41 +10,40 @@
 
 html {
   box-sizing: border-box;
-  height: 100%;
   min-width: 375px;
 }
 
 body {
   background-color: var(--color-white);
-  height: 100%;
   min-width: 375px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
 }
 
 main {
-  margin-top: var(--margin-top);
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
 header,
 footer {
+  width: 100%;
   z-index: 10;
+  position: sticky;
 }
 
 header {
-  position: fixed;
-  width: 100vw;
   top: 0;
 }
 
 footer {
-  position: sticky;
   bottom: 0;
+  height: 60px;
 }
 
 h1,

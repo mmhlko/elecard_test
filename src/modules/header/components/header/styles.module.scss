@@ -5,7 +5,18 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+
+        &_radio {
+            div {
+                background-color: inherit;
+                padding: 0;
+
+                h2 {
+                    color: var(--color-white);
+                }
+            }
+        }
     }
 }
 
